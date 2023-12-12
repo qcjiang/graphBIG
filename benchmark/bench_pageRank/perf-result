@@ -1,0 +1,40 @@
+==================================================================
+   ________                    .__   __________.___  ________ 
+  /  _____/___________  ______ |  |__\______   \   |/  _____/ 
+ /   \  __\_  __ \__  \ \____ \|  |  \|    |  _/   /   \  ___ 
+ \    \_\  \  | \// __ \|  |_> >   Y  \    |   \   \    \_\  \
+  \______  /__|  (____  /   __/|___|  /______  /___|\______  /
+         \/           \/|__|        \/       \/            \/ 
+                                                                 
+==================================================================
+Benchmark: Degree Centrality
+loading data... 
+== 9238061 vertices  43985710 edges
+== time: 74.7147 sec
+threadnum: 1
+damping factor: 0.85
+quadratic error: 0.001
+
+computing Page Rank ...
+Page Rank finish 
+== iteration #: 0
+== time: 15.7437 sec
+==================================================================
+
+ Performance counter stats for './pagerank --dataset /mnt/panzer/rahbera/graph_datasets/graphBIG/CL-10M-1d8-L5':
+
+           4532946      minor-faults                                                
+         876346295      dtlb_load_misses.miss_causes_a_walk                                     (57.14%)
+       82651691014      dtlb_load_misses.walk_pending                                     (57.14%)
+       79150310776      dtlb_load_misses.walk_active                                     (57.14%)
+         148955427      dtlb_store_misses.miss_causes_a_walk                                     (57.14%)
+       12743058256      dtlb_store_misses.walk_pending                                     (57.14%)
+       12727492263      dtlb_store_misses.walk_active                                     (57.14%)
+      448612425638      cycles                                                        (57.14%)
+
+     115.618708372 seconds time elapsed
+
+     107.577414000 seconds user
+       8.027210000 seconds sys
+
+

@@ -1,0 +1,37 @@
+==================================================================
+   ________                    .__   __________.___  ________ 
+  /  _____/___________  ______ |  |__\______   \   |/  _____/ 
+ /   \  __\_  __ \__  \ \____ \|  |  \|    |  _/   /   \  ___ 
+ \    \_\  \  | \// __ \|  |_> >   Y  \    |   \   \    \_\  \
+  \______  /__|  (____  /   __/|___|  /______  /___|\______  /
+         \/           \/|__|        \/       \/            \/ 
+                                                                 
+==================================================================
+Benchmark: Degree Centrality
+loading data... 
+== 9238061 vertices  43985710 edges
+== time: 72.7859 sec
+
+computing DC for all vertices...
+DC finish: 
+== inDegree[Max-134 Min-0]  outDegree[Max-137 Min-0]
+== time: 13.9375 sec
+==================================================================
+
+ Performance counter stats for './dc --dataset /mnt/panzer/rahbera/graph_datasets/graphBIG/CL-10M-1d8-L5':
+
+           4532434      minor-faults                                                
+         852884555      dtlb_load_misses.miss_causes_a_walk                                     (57.14%)
+       81498873444      dtlb_load_misses.walk_pending                                     (57.14%)
+       77633097873      dtlb_load_misses.walk_active                                     (57.14%)
+         148807882      dtlb_store_misses.miss_causes_a_walk                                     (57.15%)
+       12356208864      dtlb_store_misses.walk_pending                                     (57.14%)
+       12342723360      dtlb_store_misses.walk_active                                     (57.14%)
+      429875385671      cycles                                                        (57.14%)
+
+     110.850329299 seconds time elapsed
+
+     102.462067000 seconds user
+       8.379514000 seconds sys
+
+

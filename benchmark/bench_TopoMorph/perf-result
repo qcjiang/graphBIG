@@ -1,0 +1,35 @@
+==================================================================
+   ________                    .__   __________.___  ________ 
+  /  _____/___________  ______ |  |__\______   \   |/  _____/ 
+ /   \  __\_  __ \__  \ \____ \|  |  \|    |  _/   /   \  ___ 
+ \    \_\  \  | \// __ \|  |_> >   Y  \    |   \   \    \_\  \
+  \______  /__|  (____  /   __/|___|  /______  /___|\______  /
+         \/           \/|__|        \/       \/            \/ 
+                                                                 
+==================================================================
+Benchmark: Moralization
+loading data... 
+== 9238061 vertices  23275266 edges
+== time: 53.3863 sec
+
+Moralization finish: 
+== time: 165.685 sec
+==================================================================
+
+ Performance counter stats for './topomorph --dataset /mnt/panzer/rahbera/graph_datasets/graphBIG/CL-10M-1d8-L5':
+
+          19436963      minor-faults                                                
+        2735791145      dtlb_load_misses.miss_causes_a_walk                                     (57.14%)
+      203416198432      dtlb_load_misses.walk_pending                                     (57.14%)
+      194688986183      dtlb_load_misses.walk_active                                     (57.14%)
+         489725273      dtlb_store_misses.miss_causes_a_walk                                     (57.14%)
+       28295259118      dtlb_store_misses.walk_pending                                     (57.14%)
+       28182835645      dtlb_store_misses.walk_active                                     (57.14%)
+     1260158704269      cycles                                                        (57.14%)
+
+     324.967203275 seconds time elapsed
+
+     293.604351000 seconds user
+      31.332358000 seconds sys
+
+

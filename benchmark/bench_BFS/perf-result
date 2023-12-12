@@ -1,0 +1,36 @@
+==================================================================
+   ________                    .__   __________.___  ________ 
+  /  _____/___________  ______ |  |__\______   \   |/  _____/ 
+ /   \  __\_  __ \__  \ \____ \|  |  \|    |  _/   /   \  ___ 
+ \    \_\  \  | \// __ \|  |_> >   Y  \    |   \   \    \_\  \
+  \______  /__|  (____  /   __/|___|  /______  /___|\______  /
+         \/           \/|__|        \/       \/            \/ 
+                                                                 
+==================================================================
+Benchmark: BFS
+loading data... 
+== 9238061 vertices  43985710 edges
+== time: 80.2639 sec
+
+BFS root: 0
+BFS finish: 
+== time: 7.19423 sec
+==================================================================
+
+ Performance counter stats for './bfs --dataset /mnt/panzer/rahbera/graph_datasets/graphBIG/CL-10M-1d8-L5':
+
+           4577810      minor-faults                                                
+         850503826      dtlb_load_misses.miss_causes_a_walk                                     (57.14%)
+       92996577333      dtlb_load_misses.walk_pending                                     (57.15%)
+       86131077833      dtlb_load_misses.walk_active                                     (57.15%)
+         153119031      dtlb_store_misses.miss_causes_a_walk                                     (57.14%)
+       15015058427      dtlb_store_misses.walk_pending                                     (57.14%)
+       14983179473      dtlb_store_misses.walk_active                                     (57.14%)
+      406974417711      cycles                                                        (57.14%)
+
+     113.522389224 seconds time elapsed
+
+     104.793373000 seconds user
+       8.635783000 seconds sys
+
+

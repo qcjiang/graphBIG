@@ -1,0 +1,38 @@
+==================================================================
+   ________                    .__   __________.___  ________ 
+  /  _____/___________  ______ |  |__\______   \   |/  _____/ 
+ /   \  __\_  __ \__  \ \____ \|  |  \|    |  _/   /   \  ___ 
+ \    \_\  \  | \// __ \|  |_> >   Y  \    |   \   \    \_\  \
+  \______  /__|  (____  /   __/|___|  /______  /___|\______  /
+         \/           \/|__|        \/       \/            \/ 
+                                                                 
+==================================================================
+Benchmark: ubench-add
+== 100 vertices  1000 edges
+
+add finish: 
+== 100 vertices  1000 edges
+== time: 0.000957966 sec
+==================================================================
+
+ Performance counter stats for './ubench_add --dataset /mnt/panzer/rahbera/graph_datasets/graphBIG/CL-10M-1d8-L5':
+
+               354      minor-faults                                                
+              8819      dtlb_load_misses.miss_causes_a_walk                                     (10.95%)
+            147173      dtlb_load_misses.walk_pending                                     (84.35%)
+            156963      dtlb_load_misses.walk_active                                   
+              2208      dtlb_store_misses.miss_causes_a_walk                                   
+             72730      dtlb_store_misses.walk_pending                                     (89.05%)
+             13184      dtlb_store_misses.walk_active                                     (15.65%)
+     <not counted>      cycles                                                        (0.00%)
+
+       0.006487651 seconds time elapsed
+
+       0.000000000 seconds user
+       0.006146000 seconds sys
+
+
+Some events weren't counted. Try disabling the NMI watchdog:
+	echo 0 > /proc/sys/kernel/nmi_watchdog
+	perf stat ...
+	echo 1 > /proc/sys/kernel/nmi_watchdog
