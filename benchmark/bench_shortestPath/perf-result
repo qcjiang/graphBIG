@@ -10,26 +10,31 @@
 Benchmark: sssp shortest path
 loading data... 
 == 9238061 vertices  43985710 edges
-== time: 75.2973 sec
+== time: 76.6222 sec
 
 Shortest Path: source-0...
-== time: 10.7816 sec
+== time: 11.0464 sec
 ==================================================================
 
  Performance counter stats for './sssp --dataset /mnt/panzer/rahbera/graph_datasets/graphBIG/CL-10M-1d8-L5':
 
            4600345      minor-faults                                                
-         832974698      dtlb_load_misses.miss_causes_a_walk                                     (57.14%)
-       86283431330      dtlb_load_misses.walk_pending                                     (57.14%)
-       81365723323      dtlb_load_misses.walk_active                                     (57.14%)
-         151515689      dtlb_store_misses.miss_causes_a_walk                                     (57.14%)
-       12655407282      dtlb_store_misses.walk_pending                                     (57.14%)
-       12630800817      dtlb_store_misses.walk_active                                     (57.14%)
-      425770069709      cycles                                                        (57.14%)
+       64365230039      dTLB-loads                                                    (41.66%)
+         432098278      dTLB-load-misses          #    0.67% of all dTLB cache accesses  (41.67%)
+       35195784633      dTLB-stores                                                   (41.67%)
+          72885310      dTLB-store-misses                                             (41.67%)
+         833095338      dtlb_load_misses.miss_causes_a_walk                                     (33.34%)
+       84325311806      dtlb_load_misses.walk_pending                                     (33.33%)
+       79369396048      dtlb_load_misses.walk_active                                     (33.33%)
+         152478509      dtlb_store_misses.miss_causes_a_walk                                     (33.33%)
+       12422879519      dtlb_store_misses.walk_pending                                     (33.33%)
+       12377328181      dtlb_store_misses.walk_active                                     (33.33%)
+      410852257430      cycles                                                        (33.33%)
+      267322384291      instructions              #    0.65  insn per cycle           (41.66%)
 
-     109.793895799 seconds time elapsed
+     112.042316238 seconds time elapsed
 
-     101.258726000 seconds user
-       8.518883000 seconds sys
+     103.465415000 seconds user
+       8.571454000 seconds sys
 
 

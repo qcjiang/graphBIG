@@ -11,24 +11,29 @@ Benchmark: graph construction
 == 100 vertices  1000 edges
 
 construction finish 
-== time: 0.000357866 sec
+== time: 0.000991821 sec
 ==================================================================
 
  Performance counter stats for './graphconstruct --dataset /mnt/panzer/rahbera/graph_datasets/graphBIG/CL-10M-1d8-L5':
 
-               380      minor-faults                                                
-              6272      dtlb_load_misses.miss_causes_a_walk                                     (94.48%)
-            252968      dtlb_load_misses.walk_pending                                   
-            243362      dtlb_load_misses.walk_active                                   
-              2859      dtlb_store_misses.miss_causes_a_walk                                   
-             17185      dtlb_store_misses.walk_pending                                     (5.52%)
+               386      minor-faults                                                
+           2190890      dTLB-loads                                                    (52.84%)
+              2036      dTLB-load-misses          #    0.09% of all dTLB cache accesses
+           1520527      dTLB-stores                                                 
+              2168      dTLB-store-misses                                           
+              6157      dtlb_load_misses.miss_causes_a_walk                                     (47.16%)
+     <not counted>      dtlb_load_misses.walk_pending                                     (0.00%)
+     <not counted>      dtlb_load_misses.walk_active                                     (0.00%)
+     <not counted>      dtlb_store_misses.miss_causes_a_walk                                     (0.00%)
+     <not counted>      dtlb_store_misses.walk_pending                                     (0.00%)
      <not counted>      dtlb_store_misses.walk_active                                     (0.00%)
      <not counted>      cycles                                                        (0.00%)
+     <not counted>      instructions                                                  (0.00%)
 
-       0.030288857 seconds time elapsed
+       0.007716841 seconds time elapsed
 
        0.000000000 seconds user
-       0.005481000 seconds sys
+       0.006648000 seconds sys
 
 
 Some events weren't counted. Try disabling the NMI watchdog:

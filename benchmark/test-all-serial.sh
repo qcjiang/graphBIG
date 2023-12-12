@@ -1,6 +1,6 @@
 for dir in bench_* ubench_*
 do
-    if [ "$dir" = "bench_betweennessCentr" ]; then #it will take more than two hours
+    if [ "$dir" = "bench_betweennessCentr" ] || [ "$dir" = "bench_gibbsInference" ] || [ "$dir" = "bench_graphUpdate" ] || [ "$dir" = "ubench_delete" ] || [ "$dir" = "ubench_find" ]; then #they will take more than two hours
         continue
     fi
 

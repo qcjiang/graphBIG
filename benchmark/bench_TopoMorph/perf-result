@@ -10,26 +10,31 @@
 Benchmark: Moralization
 loading data... 
 == 9238061 vertices  23275266 edges
-== time: 53.3863 sec
+== time: 55.2697 sec
 
 Moralization finish: 
-== time: 165.685 sec
+== time: 172.428 sec
 ==================================================================
 
  Performance counter stats for './topomorph --dataset /mnt/panzer/rahbera/graph_datasets/graphBIG/CL-10M-1d8-L5':
 
-          19436963      minor-faults                                                
-        2735791145      dtlb_load_misses.miss_causes_a_walk                                     (57.14%)
-      203416198432      dtlb_load_misses.walk_pending                                     (57.14%)
-      194688986183      dtlb_load_misses.walk_active                                     (57.14%)
-         489725273      dtlb_store_misses.miss_causes_a_walk                                     (57.14%)
-       28295259118      dtlb_store_misses.walk_pending                                     (57.14%)
-       28182835645      dtlb_store_misses.walk_active                                     (57.14%)
-     1260158704269      cycles                                                        (57.14%)
+          19440035      minor-faults                                                
+      180104255988      dTLB-loads                                                    (41.66%)
+         922763976      dTLB-load-misses          #    0.51% of all dTLB cache accesses  (41.66%)
+      116322648841      dTLB-stores                                                   (41.67%)
+         202822490      dTLB-store-misses                                             (41.67%)
+        2721811860      dtlb_load_misses.miss_causes_a_walk                                     (33.33%)
+      199640486099      dtlb_load_misses.walk_pending                                     (33.33%)
+      191045239946      dtlb_load_misses.walk_active                                     (33.33%)
+         488075901      dtlb_store_misses.miss_causes_a_walk                                     (33.33%)
+       27869353336      dtlb_store_misses.walk_pending                                     (33.33%)
+       27773009165      dtlb_store_misses.walk_active                                     (33.33%)
+     1231052594061      cycles                                                        (33.33%)
+      799160169392      instructions              #    0.65  insn per cycle           (41.67%)
 
-     324.967203275 seconds time elapsed
+     336.332072563 seconds time elapsed
 
-     293.604351000 seconds user
-      31.332358000 seconds sys
+     303.053499000 seconds user
+      33.258408000 seconds sys
 
 

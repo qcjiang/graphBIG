@@ -10,27 +10,32 @@
 Benchmark: ubench-traverse
 loading data... 
 == 9238061 vertices  43985710 edges
-== time: 76.838 sec
+== time: 77.3428 sec
 
 graph traverse finish: 
 == 9238061 vertices  43985710 edges
-== time: 1.89561 sec
+== time: 1.84812 sec
 ==================================================================
 
  Performance counter stats for './ubench_traverse --dataset /mnt/panzer/rahbera/graph_datasets/graphBIG/CL-10M-1d8-L5':
 
-           4532395      minor-faults                                                
-         728508983      dtlb_load_misses.miss_causes_a_walk                                     (57.14%)
-       71803629435      dtlb_load_misses.walk_pending                                     (57.14%)
-       68795969104      dtlb_load_misses.walk_active                                     (57.14%)
-         148037537      dtlb_store_misses.miss_causes_a_walk                                     (57.14%)
-       12577637841      dtlb_store_misses.walk_pending                                     (57.14%)
-       12548960524      dtlb_store_misses.walk_active                                     (57.14%)
-      395682922367      cycles                                                        (57.15%)
+           4532919      minor-faults                                                
+       61043606253      dTLB-loads                                                    (41.66%)
+         327811865      dTLB-load-misses          #    0.54% of all dTLB cache accesses  (41.66%)
+       33640502912      dTLB-stores                                                   (41.67%)
+          72648188      dTLB-store-misses                                             (41.67%)
+         727399067      dtlb_load_misses.miss_causes_a_walk                                     (33.34%)
+       69301965161      dtlb_load_misses.walk_pending                                     (33.34%)
+       66439072190      dtlb_load_misses.walk_active                                     (33.34%)
+         149968196      dtlb_store_misses.miss_causes_a_walk                                     (33.33%)
+       12343930747      dtlb_store_misses.walk_pending                                     (33.33%)
+       12307556101      dtlb_store_misses.walk_active                                     (33.33%)
+      376032579680      cycles                                                        (33.33%)
+      255525468865      instructions              #    0.68  insn per cycle           (41.66%)
 
-     102.163546870 seconds time elapsed
+     102.548278140 seconds time elapsed
 
-      93.552513000 seconds user
-       8.407686000 seconds sys
+      94.470963000 seconds user
+       8.071911000 seconds sys
 
 
